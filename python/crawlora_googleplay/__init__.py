@@ -6,7 +6,7 @@ from .operations import OPERATION_COUNT, OPERATION_IDS, PLATFORM
 
 Client = GooglePlayClient
 AsyncClient = AsyncGooglePlayClient
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 DISPLAY_NAME = 'Google Play'
 PLATFORM = 'googleplay'
 CONTRACT_REVISION = 'sha256:12d5e7ff8b42944aabf39135226e7597a113d0dd6860efc8d43f4d8a9a960eef'
