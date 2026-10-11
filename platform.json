@@ -1,0 +1,23 @@
+{
+  "async_class_name": "AsyncGooglePlayClient",
+  "class_name": "GooglePlayClient",
+  "contract_revision": "sha256:12d5e7ff8b42944aabf39135226e7597a113d0dd6860efc8d43f4d8a9a960eef",
+  "display_name": "Google Play",
+  "general_sdk_version": "1.46.0-sdk.1",
+  "golang_module_name": "github.com/Crawlora-org/crawlora-googleplay",
+  "golang_version": "0.1.0",
+  "group_name": "googleplay",
+  "java_description": "Java client for Crawlora's hosted Google Play API, with app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers. Requires a Crawlora API key.",
+  "maven_artifact_id": "crawlora-googleplay",
+  "maven_group_id": "net.crawlora",
+  "module_name": "crawlora_googleplay",
+  "npm_name": "@crawlora-org/googleplay",
+  "php_package_name": "crawlora/googleplay",
+  "php_repository": "https://github.com/Crawlora-org/crawlora-googleplay",
+  "platform": "googleplay",
+  "python_name": "crawlora-googleplay",
+  "repository": "https://github.com/Crawlora-org/crawlora-googleplay",
+  "ruby_gem_name": "crawlora-googleplay",
+  "source_contract_sha256": "8f37412b34b49c443ff8c115dadaf9b6a2a82fd767af53137ce5e9f6b288ea20",
+  "version": "0.1.0"
+}

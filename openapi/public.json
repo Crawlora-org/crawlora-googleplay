@@ -1,0 +1,1772 @@
+{
+  "basePath": "/api/v1",
+  "definitions": {
+    "app.Response": {
+      "description": "The Response struct is used for wrapping the API response with a code, message, and data.",
+      "properties": {
+        "code": {
+          "description": "Code is the HTTP status code or a custom code used to indicate the result of the request\n@example 200",
+          "type": "integer"
+        },
+        "data": {
+          "description": "Data is the response data (can be any object or null)\n@example {\"id\": 1, \"name\": \"John Doe\"}"
+        },
+        "msg": {
+          "description": "Msg is the message that describes the result of the request\n@example \"Request successful\""
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.App": {
+      "properties": {
+        "ad_supported": {
+          "example": false,
+          "type": "boolean"
+        },
+        "android_max_version": {
+          "example": "15",
+          "type": "string"
+        },
+        "android_version": {
+          "example": "8.0",
+          "type": "string"
+        },
+        "android_version_text": {
+          "example": "8.0 and up",
+          "type": "string"
+        },
+        "app_id": {
+          "example": "com.openai.chatgpt",
+          "type": "string"
+        },
+        "available": {
+          "example": true,
+          "type": "boolean"
+        },
+        "categories": {
+          "items": {
+            "$ref": "#/definitions/googleplay.Category"
+          },
+          "type": "array"
+        },
+        "comments": {
+          "example": [
+            "[\"Great app\"",
+            "\"Very useful\"]"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "content_rating": {
+          "example": "Teen",
+          "type": "string"
+        },
+        "content_rating_description": {
+          "example": "Users Interact, In-App Purchases",
+          "type": "string"
+        },
+        "currency": {
+          "example": "USD",
+          "type": "string"
+        },
+        "description": {
+          "example": "Introducing ChatGPT for Android: OpenAI's latest advancements at your fingertips.",
+          "type": "string"
+        },
+        "description_html": {
+          "example": "Introducing ChatGPT for Android: OpenAI&#39;s latest advancements at your fingertips.<br><br>This official app is free.",
+          "type": "string"
+        },
+        "developer": {
+          "example": "OpenAI",
+          "type": "string"
+        },
+        "developer_address": {
+          "example": "1455 3RD St, San Francisco, CA 94158-2210, United States",
+          "type": "string"
+        },
+        "developer_email": {
+          "example": "support@openai.com",
+          "type": "string"
+        },
+        "developer_id": {
+          "example": "7577165439232992817",
+          "type": "string"
+        },
+        "developer_internal_id": {
+          "example": "7577165439232992817",
+          "type": "string"
+        },
+        "developer_legal_address": {
+          "example": "1455 3RD St, San Francisco, CA 94158-2210, United States",
+          "type": "string"
+        },
+        "developer_legal_email": {
+          "example": "support@openai.com",
+          "type": "string"
+        },
+        "developer_legal_name": {
+          "example": "OpenAI Opco, LLC",
+          "type": "string"
+        },
+        "developer_legal_phone_number": {
+          "example": "+1 415-231-2395",
+          "type": "string"
+        },
+        "developer_website": {
+          "example": "https://help.openai.com",
+          "type": "string"
+        },
+        "discount_end_date": {
+          "example": "2026-03-31T23:59:59Z",
+          "type": "string"
+        },
+        "early_access_enabled": {
+          "example": false,
+          "type": "boolean"
+        },
+        "features": {
+          "items": {
+            "$ref": "#/definitions/googleplay.Feature"
+          },
+          "type": "array"
+        },
+        "free": {
+          "example": true,
+          "type": "boolean"
+        },
+        "genre": {
+          "example": "Productivity",
+          "type": "string"
+        },
+        "genre_id": {
+          "example": "PRODUCTIVITY",
+          "type": "string"
+        },
+        "header_image": {
+          "example": "https://play-lh.googleusercontent.com/sample-header-image",
+          "type": "string"
+        },
+        "histogram": {
+          "type": "object"
+        },
+        "iap_range": {
+          "example": "$0.99 - $199.99 per item",
+          "type": "string"
+        },
+        "icon": {
+          "example": "https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A",
+          "type": "string"
+        },
+        "installs": {
+          "example": "100,000,000+",
+          "type": "string"
+        },
+        "is_available_in_play_pass": {
+          "example": false,
+          "type": "boolean"
+        },
+        "max_installs": {
+          "example": 500000000,
+          "type": "integer"
+        },
+        "min_installs": {
+          "example": 100000000,
+          "type": "integer"
+        },
+        "more_by_developer": {
+          "items": {
+            "$ref": "#/definitions/googleplay.ListApp"
+          },
+          "type": "array"
+        },
+        "offers_iap": {
+          "example": true,
+          "type": "boolean"
+        },
+        "original_price": {
+          "example": 4.99,
+          "type": "number"
+        },
+        "platforms": {
+          "example": [
+            "[\"phone\"",
+            "\"tablet\"",
+            "\"chromebook\"]"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "preregister": {
+          "example": false,
+          "type": "boolean"
+        },
+        "preview_video": {
+          "example": "https://play.google.com/preview/sample",
+          "type": "string"
+        },
+        "price": {
+          "example": 0,
+          "type": "number"
+        },
+        "price_text": {
+          "example": "Free",
+          "type": "string"
+        },
+        "privacy_policy": {
+          "example": "https://openai.com/policies/privacy-policy",
+          "type": "string"
+        },
+        "ratings": {
+          "example": 40123456,
+          "type": "integer"
+        },
+        "recent_changes": {
+          "example": "Bug fixes and performance improvements.",
+          "type": "string"
+        },
+        "released": {
+          "example": "2023-07-19",
+          "type": "string"
+        },
+        "reviews": {
+          "example": 1234567,
+          "type": "integer"
+        },
+        "score": {
+          "example": 4.8,
+          "type": "number"
+        },
+        "score_text": {
+          "example": "4.8",
+          "type": "string"
+        },
+        "screenshots": {
+          "example": [
+            "[\"https://play-lh.googleusercontent.com/sample-screenshot-1\"",
+            "\"https://play-lh.googleusercontent.com/sample-screenshot-2\"]"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "similar_apps": {
+          "items": {
+            "$ref": "#/definitions/googleplay.ListApp"
+          },
+          "type": "array"
+        },
+        "summary": {
+          "example": "The official app by OpenAI",
+          "type": "string"
+        },
+        "title": {
+          "example": "ChatGPT",
+          "type": "string"
+        },
+        "updated": {
+          "example": 1736899200,
+          "type": "integer"
+        },
+        "url": {
+          "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=us",
+          "type": "string"
+        },
+        "version": {
+          "example": "1.2026.056",
+          "type": "string"
+        },
+        "video": {
+          "example": "https://play.google.com/video/sample",
+          "type": "string"
+        },
+        "video_image": {
+          "example": "https://play-lh.googleusercontent.com/sample-video-cover",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.AppDetailsResponse": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/googleplay.App"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.Category": {
+      "properties": {
+        "id": {
+          "example": "PRODUCTIVITY",
+          "type": "string"
+        },
+        "name": {
+          "example": "Productivity",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.DataSafetyEntry": {
+      "properties": {
+        "data": {
+          "example": "Email address",
+          "type": "string"
+        },
+        "optional": {
+          "example": false,
+          "type": "boolean"
+        },
+        "purpose": {
+          "example": "Analytics",
+          "type": "string"
+        },
+        "type": {
+          "example": "Personal info",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.DataSafetyResult": {
+      "properties": {
+        "collected_data": {
+          "items": {
+            "$ref": "#/definitions/googleplay.DataSafetyEntry"
+          },
+          "type": "array"
+        },
+        "privacy_policy_url": {
+          "example": "https://openai.com/policies/privacy-policy",
+          "type": "string"
+        },
+        "security_practices": {
+          "items": {
+            "$ref": "#/definitions/googleplay.SecurityPractice"
+          },
+          "type": "array"
+        },
+        "shared_data": {
+          "items": {
+            "$ref": "#/definitions/googleplay.DataSafetyEntry"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.DeviceRating": {
+      "properties": {
+        "device": {
+          "example": "phone",
+          "type": "string"
+        },
+        "histogram": {
+          "type": "object"
+        },
+        "ratings": {
+          "example": 326809,
+          "type": "integer"
+        },
+        "reviews": {
+          "example": 8946,
+          "type": "integer"
+        },
+        "score": {
+          "example": 4.7,
+          "type": "number"
+        },
+        "score_text": {
+          "example": "4.7",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.Feature": {
+      "properties": {
+        "description": {
+          "example": "Get answers, writing help, and image generation.",
+          "type": "string"
+        },
+        "title": {
+          "example": "AI assistant",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.ListApp": {
+      "properties": {
+        "app_id": {
+          "example": "com.openai.chatgpt",
+          "type": "string"
+        },
+        "currency": {
+          "example": "USD",
+          "type": "string"
+        },
+        "developer": {
+          "example": "OpenAI",
+          "type": "string"
+        },
+        "developer_id": {
+          "example": "7577165439232992817",
+          "type": "string"
+        },
+        "free": {
+          "example": true,
+          "type": "boolean"
+        },
+        "icon": {
+          "example": "https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A",
+          "type": "string"
+        },
+        "price": {
+          "example": 0,
+          "type": "number"
+        },
+        "price_text": {
+          "example": "FREE",
+          "type": "string"
+        },
+        "score": {
+          "example": 4.8,
+          "type": "number"
+        },
+        "score_text": {
+          "example": "4.8",
+          "type": "string"
+        },
+        "summary": {
+          "example": "The official app by OpenAI",
+          "type": "string"
+        },
+        "title": {
+          "example": "ChatGPT",
+          "type": "string"
+        },
+        "url": {
+          "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.Review": {
+      "properties": {
+        "criterias": {
+          "items": {
+            "$ref": "#/definitions/googleplay.ReviewCriteria"
+          },
+          "type": "array"
+        },
+        "date": {
+          "example": "2026-02-18T12:34:56Z",
+          "type": "string"
+        },
+        "id": {
+          "example": "5b4e4d89-ce22-4f13-b676-bb3a7aafe278",
+          "type": "string"
+        },
+        "reply_date": {
+          "example": "2026-02-20T08:00:00Z",
+          "type": "string"
+        },
+        "reply_text": {
+          "example": "Thanks for the feedback!",
+          "type": "string"
+        },
+        "score": {
+          "example": 5,
+          "type": "integer"
+        },
+        "score_text": {
+          "example": "5",
+          "type": "string"
+        },
+        "text": {
+          "example": "Very helpful for quick answers and brainstorming.",
+          "type": "string"
+        },
+        "thumbs_up": {
+          "example": 124,
+          "type": "integer"
+        },
+        "title": {
+          "example": "Great app",
+          "type": "string"
+        },
+        "url": {
+          "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&reviewId=5b4e4d89-ce22-4f13-b676-bb3a7aafe278",
+          "type": "string"
+        },
+        "user_image": {
+          "example": "https://play-lh.googleusercontent.com/a-/ALV-UjVsample",
+          "type": "string"
+        },
+        "user_name": {
+          "example": "Jane Doe",
+          "type": "string"
+        },
+        "version": {
+          "example": "1.2026.056",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.ReviewCriteria": {
+      "properties": {
+        "criteria": {
+          "example": "Accuracy",
+          "type": "string"
+        },
+        "rating": {
+          "example": 5,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.ReviewsResult": {
+      "properties": {
+        "data": {
+          "items": {
+            "$ref": "#/definitions/googleplay.Review"
+          },
+          "type": "array"
+        },
+        "next_pagination_token": {
+          "example": "CscBIr4BAb_yELvAqtSacgExc3y_bO88_b1Q",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.SecurityPractice": {
+      "properties": {
+        "description": {
+          "example": "Your data is transferred over a secure connection",
+          "type": "string"
+        },
+        "practice": {
+          "example": "Data is encrypted in transit",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.Suggestion": {
+      "properties": {
+        "term": {
+          "example": "chatgpt",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.categoriesResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.dataSafetyResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/googleplay.DataSafetyResult"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.developerResultsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.listResultsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.permissionsResultsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.ratingsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {
+            "$ref": "#/definitions/googleplay.DeviceRating"
+          },
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.reviewsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/googleplay.ReviewsResult"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.searchResultsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.similarResultsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "googleplay.suggestResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "items": {
+            "$ref": "#/definitions/googleplay.Suggestion"
+          },
+          "type": "array"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "host": "api.crawlora.net",
+  "info": {
+    "contact": {
+      "email": "support@crawlora.net",
+      "name": "API Support",
+      "url": "https://crawlora.net"
+    },
+    "description": "Crawlora is a hosted web-data and SERP API: call documented REST endpoints and get normalized JSON instead of HTML to parse — across search/SERP, maps and local, e-commerce, app stores, social, media and finance. One API key; Crawlora runs the proxy rotation, headless browsers and parsing behind the scenes. Billed pay-on-success: charged only on a successful 2xx response, 1-10 credits per call, with a free tier of 2,000 credits per month and no card. A hosted MCP server (mcp.crawlora.net/mcp) exposes the same catalog as agent tools. Search endpoints accept `q` as a universal alias for whichever search-term parameter they document (`query`, `term`, `keyword`, or Amazon's `k`), so one parameter name works across the whole catalog; an explicitly supplied documented name always wins.",
+    "license": {
+      "name": "Crawlora Terms of Service",
+      "url": "https://crawlora.net/terms"
+    },
+    "termsOfService": "https://crawlora.net/terms",
+    "title": "Crawlora API",
+    "version": "1.2",
+    "x-logo": {
+      "altText": "Crawlora",
+      "backgroundColor": "#FFFFFF",
+      "url": "https://raw.githubusercontent.com/Crawlora-org/crawlora-mcp/main/assets/logo-400x400.png"
+    }
+  },
+  "paths": {
+    "/googleplay/app": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns normalized app metadata from a Google Play details page, including installs, ratings, pricing, version info, developer metadata, media assets, release state, selected user comments, and \"More by this developer\" and \"Similar apps\" recommendation rails. For a per-device (phone/tablet/Chromebook) ratings-and-reviews breakdown, see `/googleplay/ratings`. Defaults: `country=us`, `lang=en`.",
+        "operationId": "googleplay-app",
+        "parameters": [
+          {
+            "description": "Google Play package name",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Two-letter storefront country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Wrapped app details payload",
+            "schema": {
+              "$ref": "#/definitions/googleplay.AppDetailsResponse"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve full Google Play app details",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/categories": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns category ids found in the Google Play apps navigation.",
+        "operationId": "googleplay-categories",
+        "parameters": [
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.categoriesResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve Google Play app categories",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/datasafety": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the data safety information displayed on Google Play.",
+        "operationId": "googleplay-datasafety",
+        "parameters": [
+          {
+            "description": "Google Play app id",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.dataSafetyResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve Google Play data safety details",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/developer/{dev_id}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns apps published by a developer id or developer name.",
+        "operationId": "googleplay-developer",
+        "parameters": [
+          {
+            "description": "Developer id or name",
+            "in": "path",
+            "name": "dev_id",
+            "required": true,
+            "type": "string",
+            "x-example": "OpenAI"
+          },
+          {
+            "description": "Number of apps",
+            "in": "query",
+            "name": "num",
+            "type": "integer",
+            "x-example": 60
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Resolve each app to full detail",
+            "in": "query",
+            "name": "full_detail",
+            "type": "boolean"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.developerResultsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve apps by Google Play developer",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/list": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns apps from a Google Play collection and category.",
+        "operationId": "googleplay-list",
+        "parameters": [
+          {
+            "description": "Collection: TOP_FREE, TOP_PAID, GROSSING, NEW_FREE, NEW_PAID",
+            "enum": [
+              "TOP_FREE",
+              "TOP_PAID",
+              "GROSSING",
+              "NEW_FREE",
+              "NEW_PAID"
+            ],
+            "in": "query",
+            "name": "collection",
+            "type": "string",
+            "x-example": "TOP_FREE"
+          },
+          {
+            "description": "Category id",
+            "in": "query",
+            "name": "category",
+            "type": "string",
+            "x-example": "TOOLS"
+          },
+          {
+            "description": "Google Play device tab: phone, tablet, tv, chromebook, watch, xr, car",
+            "enum": [
+              "phone",
+              "tablet",
+              "tv",
+              "chromebook",
+              "watch",
+              "xr",
+              "car"
+            ],
+            "in": "query",
+            "name": "device",
+            "type": "string",
+            "x-example": "tablet"
+          },
+          {
+            "description": "Family age range",
+            "in": "query",
+            "name": "age",
+            "type": "string",
+            "x-example": "AGE_RANGE1"
+          },
+          {
+            "description": "Number of apps",
+            "in": "query",
+            "name": "num",
+            "type": "integer",
+            "x-example": 50
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Resolve each app to full detail",
+            "in": "query",
+            "name": "full_detail",
+            "type": "boolean"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.listResultsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve apps from a Google Play top collection",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/permissions": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns Google Play permission groups or a short permission name list.",
+        "operationId": "googleplay-permissions",
+        "parameters": [
+          {
+            "description": "Google Play app id",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Return only permission names",
+            "in": "query",
+            "name": "short",
+            "type": "boolean"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.permissionsResultsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve Google Play app permissions",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/ratings": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the ratings-and-reviews breakdown Google Play shows under the details page's device tabs, one entry each for phone, tablet, and Chromebook. Defaults: `country=us`, `lang=en`.",
+        "operationId": "googleplay-ratings",
+        "parameters": [
+          {
+            "description": "Google Play package name",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Two-letter storefront country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.ratingsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Get Google Play ratings by device",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/reviews": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns one or more pages of app reviews. Set `paginate=true` to fetch only the requested page.",
+        "operationId": "googleplay-reviews",
+        "parameters": [
+          {
+            "description": "Google Play app id",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Sort: helpfulness, newest, rating",
+            "enum": [
+              "helpfulness",
+              "newest",
+              "rating"
+            ],
+            "in": "query",
+            "name": "sort",
+            "type": "string",
+            "x-example": "newest"
+          },
+          {
+            "description": "Number of reviews",
+            "in": "query",
+            "name": "num",
+            "type": "integer",
+            "x-example": 100
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Only fetch the requested page",
+            "in": "query",
+            "name": "paginate",
+            "type": "boolean"
+          },
+          {
+            "description": "Token from a previous response",
+            "in": "query",
+            "name": "next_pagination_token",
+            "type": "string"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.reviewsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve Google Play reviews",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/search": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns Google Play search results for a term.",
+        "operationId": "googleplay-search",
+        "parameters": [
+          {
+            "description": "Search term",
+            "in": "query",
+            "name": "term",
+            "required": true,
+            "type": "string",
+            "x-example": "chatgpt"
+          },
+          {
+            "description": "Number of apps",
+            "in": "query",
+            "name": "num",
+            "type": "integer",
+            "x-example": 20
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Resolve each app to full detail",
+            "in": "query",
+            "name": "full_detail",
+            "type": "boolean"
+          },
+          {
+            "description": "Price filter: all, free, paid",
+            "enum": [
+              "all",
+              "free",
+              "paid"
+            ],
+            "in": "query",
+            "name": "price",
+            "type": "string",
+            "x-example": "all"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.searchResultsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search Google Play",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/similar": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns apps from the \"Similar apps\" cluster on an app details page.",
+        "operationId": "googleplay-similar",
+        "parameters": [
+          {
+            "description": "Google Play app id",
+            "in": "query",
+            "name": "app_id",
+            "required": true,
+            "type": "string",
+            "x-example": "com.openai.chatgpt"
+          },
+          {
+            "description": "Number of apps",
+            "in": "query",
+            "name": "num",
+            "type": "integer",
+            "x-example": 24
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          },
+          {
+            "default": false,
+            "description": "Resolve each app to full detail",
+            "in": "query",
+            "name": "full_detail",
+            "type": "boolean"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.similarResultsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve similar Google Play apps",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    },
+    "/googleplay/suggest/{term}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns up to 10 suggestions for a search term.",
+        "operationId": "googleplay-suggest",
+        "parameters": [
+          {
+            "description": "Search term prefix",
+            "in": "path",
+            "name": "term",
+            "required": true,
+            "type": "string",
+            "x-example": "chatg"
+          },
+          {
+            "description": "Two-letter country code",
+            "in": "query",
+            "name": "country",
+            "type": "string",
+            "x-example": "us"
+          },
+          {
+            "description": "Two-letter language code",
+            "in": "query",
+            "name": "lang",
+            "type": "string",
+            "x-example": "en"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/googleplay.suggestResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve Google Play query suggestions",
+        "tags": [
+          "googleplay"
+        ]
+      }
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "ApiKeyAuth": {
+      "in": "header",
+      "name": "x-api-key",
+      "type": "apiKey"
+    }
+  },
+  "swagger": "2.0",
+  "tags": [
+    {
+      "name": "googleplay"
+    }
+  ]
+}

@@ -1,0 +1,867 @@
+{
+  "platform": "googleplay",
+  "operationCount": 11,
+  "operationIds": [
+    "googleplay-app",
+    "googleplay-categories",
+    "googleplay-datasafety",
+    "googleplay-developer",
+    "googleplay-list",
+    "googleplay-permissions",
+    "googleplay-ratings",
+    "googleplay-reviews",
+    "googleplay-search",
+    "googleplay-similar",
+    "googleplay-suggest"
+  ],
+  "methods": {
+    "app": "googleplay-app",
+    "categories": "googleplay-categories",
+    "datasafety": "googleplay-datasafety",
+    "developer": "googleplay-developer",
+    "list": "googleplay-list",
+    "permissions": "googleplay-permissions",
+    "ratings": "googleplay-ratings",
+    "reviews": "googleplay-reviews",
+    "search": "googleplay-search",
+    "similar": "googleplay-similar",
+    "suggest": "googleplay-suggest"
+  },
+  "operations": {
+    "googleplay-app": {
+      "id": "googleplay-app",
+      "method": "GET",
+      "path": "/googleplay/app",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play package name",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Two-letter storefront country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-categories": {
+      "id": "googleplay-categories",
+      "method": "GET",
+      "path": "/googleplay/categories",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-datasafety": {
+      "id": "googleplay-datasafety",
+      "method": "GET",
+      "path": "/googleplay/datasafety",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play app id",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-developer": {
+      "id": "googleplay-developer",
+      "method": "GET",
+      "path": "/googleplay/developer/{dev_id}",
+      "pathParams": [
+        "dev_id"
+      ],
+      "queryParams": [
+        {
+          "name": "num",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "full_detail",
+          "in": "query",
+          "type": "boolean"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Developer id or name",
+          "in": "path",
+          "name": "dev_id",
+          "required": true,
+          "type": "string",
+          "x-example": "OpenAI"
+        },
+        {
+          "description": "Number of apps",
+          "in": "query",
+          "name": "num",
+          "type": "integer",
+          "x-example": 60
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Resolve each app to full detail",
+          "in": "query",
+          "name": "full_detail",
+          "type": "boolean"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-list": {
+      "id": "googleplay-list",
+      "method": "GET",
+      "path": "/googleplay/list",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "collection",
+          "in": "query",
+          "type": "string",
+          "enum": [
+            "TOP_FREE",
+            "TOP_PAID",
+            "GROSSING",
+            "NEW_FREE",
+            "NEW_PAID"
+          ]
+        },
+        {
+          "name": "category",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "device",
+          "in": "query",
+          "type": "string",
+          "enum": [
+            "phone",
+            "tablet",
+            "tv",
+            "chromebook",
+            "watch",
+            "xr",
+            "car"
+          ]
+        },
+        {
+          "name": "age",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "num",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "full_detail",
+          "in": "query",
+          "type": "boolean"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Collection: TOP_FREE, TOP_PAID, GROSSING, NEW_FREE, NEW_PAID",
+          "enum": [
+            "TOP_FREE",
+            "TOP_PAID",
+            "GROSSING",
+            "NEW_FREE",
+            "NEW_PAID"
+          ],
+          "in": "query",
+          "name": "collection",
+          "type": "string",
+          "x-example": "TOP_FREE"
+        },
+        {
+          "description": "Category id",
+          "in": "query",
+          "name": "category",
+          "type": "string",
+          "x-example": "TOOLS"
+        },
+        {
+          "description": "Google Play device tab: phone, tablet, tv, chromebook, watch, xr, car",
+          "enum": [
+            "phone",
+            "tablet",
+            "tv",
+            "chromebook",
+            "watch",
+            "xr",
+            "car"
+          ],
+          "in": "query",
+          "name": "device",
+          "type": "string",
+          "x-example": "tablet"
+        },
+        {
+          "description": "Family age range",
+          "in": "query",
+          "name": "age",
+          "type": "string",
+          "x-example": "AGE_RANGE1"
+        },
+        {
+          "description": "Number of apps",
+          "in": "query",
+          "name": "num",
+          "type": "integer",
+          "x-example": 50
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Resolve each app to full detail",
+          "in": "query",
+          "name": "full_detail",
+          "type": "boolean"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-permissions": {
+      "id": "googleplay-permissions",
+      "method": "GET",
+      "path": "/googleplay/permissions",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "short",
+          "in": "query",
+          "type": "boolean"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play app id",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Return only permission names",
+          "in": "query",
+          "name": "short",
+          "type": "boolean"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-ratings": {
+      "id": "googleplay-ratings",
+      "method": "GET",
+      "path": "/googleplay/ratings",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play package name",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Two-letter storefront country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-reviews": {
+      "id": "googleplay-reviews",
+      "method": "GET",
+      "path": "/googleplay/reviews",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "type": "string",
+          "enum": [
+            "helpfulness",
+            "newest",
+            "rating"
+          ]
+        },
+        {
+          "name": "num",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "paginate",
+          "in": "query",
+          "type": "boolean"
+        },
+        {
+          "name": "next_pagination_token",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play app id",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Sort: helpfulness, newest, rating",
+          "enum": [
+            "helpfulness",
+            "newest",
+            "rating"
+          ],
+          "in": "query",
+          "name": "sort",
+          "type": "string",
+          "x-example": "newest"
+        },
+        {
+          "description": "Number of reviews",
+          "in": "query",
+          "name": "num",
+          "type": "integer",
+          "x-example": 100
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Only fetch the requested page",
+          "in": "query",
+          "name": "paginate",
+          "type": "boolean"
+        },
+        {
+          "description": "Token from a previous response",
+          "in": "query",
+          "name": "next_pagination_token",
+          "type": "string"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-search": {
+      "id": "googleplay-search",
+      "method": "GET",
+      "path": "/googleplay/search",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "term",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "num",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "full_detail",
+          "in": "query",
+          "type": "boolean"
+        },
+        {
+          "name": "price",
+          "in": "query",
+          "type": "string",
+          "enum": [
+            "all",
+            "free",
+            "paid"
+          ]
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search term",
+          "in": "query",
+          "name": "term",
+          "required": true,
+          "type": "string",
+          "x-example": "chatgpt"
+        },
+        {
+          "description": "Number of apps",
+          "in": "query",
+          "name": "num",
+          "type": "integer",
+          "x-example": 20
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Resolve each app to full detail",
+          "in": "query",
+          "name": "full_detail",
+          "type": "boolean"
+        },
+        {
+          "description": "Price filter: all, free, paid",
+          "enum": [
+            "all",
+            "free",
+            "paid"
+          ],
+          "in": "query",
+          "name": "price",
+          "type": "string",
+          "x-example": "all"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-similar": {
+      "id": "googleplay-similar",
+      "method": "GET",
+      "path": "/googleplay/similar",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "app_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "num",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "full_detail",
+          "in": "query",
+          "type": "boolean"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Google Play app id",
+          "in": "query",
+          "name": "app_id",
+          "required": true,
+          "type": "string",
+          "x-example": "com.openai.chatgpt"
+        },
+        {
+          "description": "Number of apps",
+          "in": "query",
+          "name": "num",
+          "type": "integer",
+          "x-example": 24
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        },
+        {
+          "default": false,
+          "description": "Resolve each app to full detail",
+          "in": "query",
+          "name": "full_detail",
+          "type": "boolean"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "googleplay-suggest": {
+      "id": "googleplay-suggest",
+      "method": "GET",
+      "path": "/googleplay/suggest/{term}",
+      "pathParams": [
+        "term"
+      ],
+      "queryParams": [
+        {
+          "name": "country",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "type": "string"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search term prefix",
+          "in": "path",
+          "name": "term",
+          "required": true,
+          "type": "string",
+          "x-example": "chatg"
+        },
+        {
+          "description": "Two-letter country code",
+          "in": "query",
+          "name": "country",
+          "type": "string",
+          "x-example": "us"
+        },
+        {
+          "description": "Two-letter language code",
+          "in": "query",
+          "name": "lang",
+          "type": "string",
+          "x-example": "en"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    }
+  }
+}
