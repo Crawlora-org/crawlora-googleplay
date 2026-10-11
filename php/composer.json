@@ -1,6 +1,22 @@
 {
   "name": "crawlora/googleplay",
-  "description": "Google Play client for the Crawlora hosted API",
+  "description": "Crawlora Google Play API client with 11 endpoints for app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers",
+  "keywords": [
+    "crawlora",
+    "api-client",
+    "web-scraping",
+    "googleplay",
+    "google-play",
+    "app-search",
+    "details",
+    "reviews",
+    "ratings",
+    "permissions",
+    "data-safety",
+    "charts",
+    "similar-apps",
+    "developers"
+  ],
   "type": "library",
   "license": "MIT",
   "require": {

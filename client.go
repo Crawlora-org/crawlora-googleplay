@@ -1,4 +1,4 @@
-// Package googleplay is a focused Go client for Crawlora's Google Play endpoints.
+// Package googleplay is Crawlora's Google Play API client for 11 endpoints, covering app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers.
 // API documentation: https://crawlora.net/docs?utm_source=pkg.go.dev&utm_medium=referral&utm_campaign=platform-clients&utm_content=googleplay-go-api-docs
 package googleplay
 

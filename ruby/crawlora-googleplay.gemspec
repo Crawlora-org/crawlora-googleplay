@@ -3,8 +3,8 @@ require_relative "lib/crawlora/googleplay/version"
 Gem::Specification.new do |spec|
   spec.name = "crawlora-googleplay"
   spec.version = Crawlora::Googleplay::VERSION
-  spec.summary = "Google Play client for the Crawlora hosted API"
-  spec.description = "Credential-free Google Play API access through Crawlora's hosted service."
+  spec.summary = "Google Play API client for Crawlora (11 endpoints)"
+  spec.description = "Ruby client for Crawlora's hosted Google Play API. Covers app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers across 11 endpoints."
   spec.authors = ["Crawlora"]
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6"
