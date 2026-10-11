@@ -7,7 +7,7 @@ from .async_client import AsyncCrawloraClient
 class GooglePlayClient(CrawloraClient):
     """Synchronous Google Play API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-googleplay-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-googleplay-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     def app(self, **params: Any) -> Any:
@@ -79,7 +79,7 @@ class GooglePlayClient(CrawloraClient):
 class AsyncGooglePlayClient(AsyncCrawloraClient):
     """Asynchronous Google Play API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-googleplay-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-googleplay-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     async def app(self, **params: Any) -> Any:
