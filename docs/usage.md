@@ -1,6 +1,6 @@
-# Google Play client usage
+# Google Play API endpoint reference and client usage
 
-The `@crawlora-org/googleplay` and `crawlora-googleplay` packages call Crawlora's hosted API. Set `CRAWLORA_API_KEY` to a key for your Crawlora account before making requests. Service usage is billed under that account. These clients do not run a browser or scrape Google Play locally; Crawlora is independent from and not endorsed by Google Play or its owners.
+This reference lists all 11 public Google Play API endpoints exposed by the `@crawlora-org/googleplay` and `crawlora-googleplay` packages, covering app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers. The clients call Crawlora's hosted API. Set `CRAWLORA_API_KEY` to a key for your Crawlora account before making requests. Service usage is billed under that account. These clients do not run a browser or scrape Google Play locally; Crawlora is independent from and not endorsed by Google Play or its owners.
 
 The package tracks the public API contract revision `sha256:12d5e7ff8b42944aabf39135226e7597a113d0dd6860efc8d43f4d8a9a960eef` bundled with release `0.1.1`. Maintainers can preview daily contract updates with the repository's `Sync live API contract` workflow; unchanged contracts do not produce package releases.
 

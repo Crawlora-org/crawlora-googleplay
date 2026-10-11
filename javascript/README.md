@@ -1,7 +1,7 @@
-# @crawlora-org/googleplay
+# @crawlora-org/googleplay — Google Play API client for JavaScript and TypeScript
 
 JavaScript and TypeScript client for Crawlora's hosted Google Play API.
-It calls [Crawlora](https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=googleplay-javascript-homepage); it does not run a browser or scrape Google Play locally. A Crawlora account and `CRAWLORA_API_KEY` are required, and API use is billed under your Crawlora account. Crawlora is independent from and not endorsed by Google Play or its owners.
+It exposes 11 API endpoints for app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers through [Crawlora](https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=googleplay-javascript-homepage). It does not run a browser or scrape Google Play locally. A Crawlora account and `CRAWLORA_API_KEY` are required, and API use is billed under your Crawlora account. Crawlora is independent from and not endorsed by Google Play or its owners.
 
 ## Install
 
@@ -40,6 +40,23 @@ group. See the full method and parameter list in the [online reference](https://
 
 Methods return promises and can be awaited. See the [runnable example](https://github.com/Crawlora-org/crawlora-googleplay/blob/main/examples/javascript.mjs) for a complete usage example.
 
+## Supported Google Play API endpoints
+
+This package exposes each route below as a direct method and through the `googleplay` group. See the [endpoint and parameter reference](https://github.com/Crawlora-org/crawlora-googleplay/blob/main/docs/usage.md) for complete input details.
+
+| Method | Endpoint | API operation | Description |
+| --- | --- | --- | --- |
+| `GET` | `/googleplay/app` | `googleplay-app` | Retrieve full Google Play app details |
+| `GET` | `/googleplay/categories` | `googleplay-categories` | Retrieve Google Play app categories |
+| `GET` | `/googleplay/datasafety` | `googleplay-datasafety` | Retrieve Google Play data safety details |
+| `GET` | `/googleplay/developer/{dev_id}` | `googleplay-developer` | Retrieve apps by Google Play developer |
+| `GET` | `/googleplay/list` | `googleplay-list` | Retrieve apps from a Google Play top collection |
+| `GET` | `/googleplay/permissions` | `googleplay-permissions` | Retrieve Google Play app permissions |
+| `GET` | `/googleplay/ratings` | `googleplay-ratings` | Get Google Play ratings by device |
+| `GET` | `/googleplay/reviews` | `googleplay-reviews` | Retrieve Google Play reviews |
+| `GET` | `/googleplay/search` | `googleplay-search` | Search Google Play |
+| `GET` | `/googleplay/similar` | `googleplay-similar` | Retrieve similar Google Play apps |
+| `GET` | `/googleplay/suggest/{term}` | `googleplay-suggest` | Retrieve Google Play query suggestions |
 
 ## Configuration
 
