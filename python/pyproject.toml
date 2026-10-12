@@ -7,7 +7,7 @@ name = "crawlora-googleplay"
 version = "0.1.1"
 description = "Crawlora Google Play API client with 11 endpoints for app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers"
 readme = "README.md"
-keywords = ["crawlora", "api-client", "web-scraping", "googleplay", "google-play", "app-search", "details", "reviews", "ratings", "permissions", "data-safety", "charts", "similar-apps", "developers"]
+keywords = ["crawlora", "api-client", "sdk", "web-scraping", "scraping-api", "googleplay", "google-play", "googleplay-api", "google-play-api", "googleplay-scraper", "google-play-scraper", "googleplay-data", "google-play-data", "googleplay-app-search", "googleplay-details", "googleplay-reviews", "googleplay-ratings", "googleplay-permissions", "googleplay-data-safety", "googleplay-charts"]
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]

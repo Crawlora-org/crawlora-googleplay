@@ -4,7 +4,7 @@
   "description": "Crawlora Google Play API client with 11 endpoints for app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers",
   "homepage": "https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=googleplay-javascript-homepage",
   "bugs": { "url": "https://github.com/Crawlora-org/crawlora-googleplay/issues" },
-  "keywords": ["crawlora", "api-client", "web-scraping", "googleplay", "google-play", "app-search", "details", "reviews", "ratings", "permissions", "data-safety", "charts", "similar-apps", "developers"],
+  "keywords": ["crawlora", "api-client", "sdk", "web-scraping", "scraping-api", "googleplay", "google-play", "googleplay-api", "google-play-api", "googleplay-scraper", "google-play-scraper", "googleplay-data", "google-play-data", "googleplay-app-search", "googleplay-details", "googleplay-reviews", "googleplay-ratings", "googleplay-permissions", "googleplay-data-safety", "googleplay-charts"],
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
