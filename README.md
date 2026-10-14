@@ -8,7 +8,7 @@ Official Crawlora client packages for the hosted Google Play API. Access 11 API 
 - Python: [`crawlora-googleplay`](python/README.md)
 - Go: [`github.com/Crawlora-org/crawlora-googleplay`](go.mod)
 - Ruby: [`crawlora-googleplay`](ruby/README.md)
-- Java: [`net.crawlora:crawlora-googleplay:0.1.1`](java/README.md)
+- Java: [`net.crawlora:crawlora-googleplay:0.1.2`](java/README.md)
 - PHP: [`crawlora/googleplay`](php/README.md)
 
 For installation and runnable examples, use the README for your language. See the [API endpoint and parameter reference](docs/usage.md) for shared operation details.

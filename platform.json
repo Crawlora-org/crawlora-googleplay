@@ -1,11 +1,11 @@
 {
   "async_class_name": "AsyncGooglePlayClient",
   "class_name": "GooglePlayClient",
-  "contract_revision": "sha256:12d5e7ff8b42944aabf39135226e7597a113d0dd6860efc8d43f4d8a9a960eef",
+  "contract_revision": "sha256:49b4b5e73d6e29cb250c945e2beb79d7022e97fbf223413435ee1a3a2e1e1ade",
   "display_name": "Google Play",
   "general_sdk_version": "1.46.0-sdk.1",
   "golang_module_name": "github.com/Crawlora-org/crawlora-googleplay",
-  "golang_version": "0.1.1",
+  "golang_version": "0.1.2",
   "group_name": "googleplay",
   "java_description": "Java client for Crawlora's hosted Google Play API, with app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers. Requires a Crawlora API key.",
   "maven_artifact_id": "crawlora-googleplay",
@@ -16,18 +16,25 @@
   "php_repository": "https://github.com/Crawlora-org/crawlora-googleplay",
   "platform": "googleplay",
   "python_name": "crawlora-googleplay",
-  "repository": "https://github.com/Crawlora-org/crawlora-googleplay",
-  "ruby_gem_name": "crawlora-googleplay",
-  "source_contract_sha256": "8f37412b34b49c443ff8c115dadaf9b6a2a82fd767af53137ce5e9f6b288ea20",
-  "version": "0.1.1",
   "releases": [
     {
-      "version": "0.1.1",
-      "date": "2026-10-12",
+      "changes": [
+        "Updated operation contracts: googleplay-app, googleplay-categories, googleplay-datasafety, googleplay-developer, googleplay-list, googleplay-permissions, googleplay-ratings, googleplay-reviews, googleplay-search, googleplay-similar, googleplay-suggest."
+      ],
+      "date": "2026-10-14",
+      "version": "0.1.2"
+    },
+    {
       "changes": [
         "Publish npm releases through GitHub Actions with provenance.",
         "Expand API endpoint documentation and package metadata for discoverability."
-      ]
+      ],
+      "date": "2026-10-12",
+      "version": "0.1.1"
     }
-  ]
+  ],
+  "repository": "https://github.com/Crawlora-org/crawlora-googleplay",
+  "ruby_gem_name": "crawlora-googleplay",
+  "source_contract_sha256": "edf94a318d422a94556084a811322eca2f95fd990cb37ad55abc6475c46b633a",
+  "version": "0.1.2"
 }

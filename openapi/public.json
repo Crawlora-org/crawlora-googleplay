@@ -20,36 +20,44 @@
     "googleplay.App": {
       "properties": {
         "ad_supported": {
+          "description": "Whether the app shows ads, as declared on its Google Play page.",
           "example": false,
           "type": "boolean"
         },
         "android_max_version": {
+          "description": "Highest Android version the app supports, such as `15`. Shows `VARY` when none is listed.",
           "example": "15",
           "type": "string"
         },
         "android_version": {
+          "description": "Minimum Android version the app requires, such as `8.0`.",
           "example": "8.0",
           "type": "string"
         },
         "android_version_text": {
+          "description": "Minimum Android version as Google Play words it, such as `8.0 and up`. Shows `Varies with device` when none is listed.",
           "example": "8.0 and up",
           "type": "string"
         },
         "app_id": {
+          "description": "Package name of the app on Google Play, such as `com.openai.chatgpt`. Use it with the other Google Play endpoints.",
           "example": "com.openai.chatgpt",
           "type": "string"
         },
         "available": {
+          "description": "Whether the app is available on Google Play.",
           "example": true,
           "type": "boolean"
         },
         "categories": {
+          "description": "Categories the app is listed under on Google Play.",
           "items": {
             "$ref": "#/definitions/googleplay.Category"
           },
           "type": "array"
         },
         "comments": {
+          "description": "Up to five user review texts shown on the app's details page.",
           "example": [
             "[\"Great app\"",
             "\"Very useful\"]"
@@ -60,137 +68,170 @@
           "type": "array"
         },
         "content_rating": {
+          "description": "Content rating label shown on the app page, such as `Teen`.",
           "example": "Teen",
           "type": "string"
         },
         "content_rating_description": {
+          "description": "Content descriptors listed with the rating, such as `Users Interact, In-App Purchases`.",
           "example": "Users Interact, In-App Purchases",
           "type": "string"
         },
         "currency": {
+          "description": "Currency code of the price, such as `USD`.",
           "example": "USD",
           "type": "string"
         },
         "description": {
+          "description": "Full app description as plain text.",
           "example": "Introducing ChatGPT for Android: OpenAI's latest advancements at your fingertips.",
           "type": "string"
         },
         "description_html": {
+          "description": "Full app description with its HTML formatting kept.",
           "example": "Introducing ChatGPT for Android: OpenAI&#39;s latest advancements at your fingertips.<br><br>This official app is free.",
           "type": "string"
         },
         "developer": {
+          "description": "Name of the app's developer or publisher.",
           "example": "OpenAI",
           "type": "string"
         },
         "developer_address": {
+          "description": "Developer's postal address as listed on the app page.",
           "example": "1455 3RD St, San Francisco, CA 94158-2210, United States",
           "type": "string"
         },
         "developer_email": {
+          "description": "Developer's contact email as listed on the app page.",
           "example": "support@openai.com",
           "type": "string"
         },
         "developer_id": {
+          "description": "Google Play developer ID. Use it with the developer endpoint.",
           "example": "7577165439232992817",
           "type": "string"
         },
         "developer_internal_id": {
+          "description": "Google Play developer ID, the same value as `developer_id`.",
           "example": "7577165439232992817",
           "type": "string"
         },
         "developer_legal_address": {
+          "description": "Developer's legal address as listed on the app page, on one line.",
           "example": "1455 3RD St, San Francisco, CA 94158-2210, United States",
           "type": "string"
         },
         "developer_legal_email": {
+          "description": "Developer's legal contact email as listed on the app page.",
           "example": "support@openai.com",
           "type": "string"
         },
         "developer_legal_name": {
+          "description": "Developer's registered legal name as listed on the app page.",
           "example": "OpenAI Opco, LLC",
           "type": "string"
         },
         "developer_legal_phone_number": {
+          "description": "Developer's legal contact phone number as listed on the app page.",
           "example": "+1 415-231-2395",
           "type": "string"
         },
         "developer_website": {
+          "description": "URL of the developer's website.",
           "example": "https://help.openai.com",
           "type": "string"
         },
         "discount_end_date": {
+          "description": "End date of the current discounted price, when the app is on sale.",
           "example": "2026-03-31T23:59:59Z",
           "type": "string"
         },
         "early_access_enabled": {
+          "description": "Whether the app is in Google Play early access.",
           "example": false,
           "type": "boolean"
         },
         "features": {
+          "description": "Feature highlights listed on the app page, each with a title and description.",
           "items": {
             "$ref": "#/definitions/googleplay.Feature"
           },
           "type": "array"
         },
         "free": {
+          "description": "Whether the app is free to install.",
           "example": true,
           "type": "boolean"
         },
         "genre": {
+          "description": "Main category name of the app, such as `Productivity`.",
           "example": "Productivity",
           "type": "string"
         },
         "genre_id": {
+          "description": "ID of the app's main category, such as `PRODUCTIVITY`.",
           "example": "PRODUCTIVITY",
           "type": "string"
         },
         "header_image": {
+          "description": "URL of the app's header image.",
           "example": "https://play-lh.googleusercontent.com/sample-header-image",
           "type": "string"
         },
         "histogram": {
+          "description": "Number of ratings at each star level, keyed `1` to `5`.",
           "type": "object"
         },
         "iap_range": {
+          "description": "Price range of in-app purchases as Google Play shows it, such as `$0.99 - $199.99 per item`.",
           "example": "$0.99 - $199.99 per item",
           "type": "string"
         },
         "icon": {
+          "description": "URL of the app icon.",
           "example": "https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A",
           "type": "string"
         },
         "installs": {
+          "description": "Install count band as Google Play shows it, such as `100,000,000+`.",
           "example": "100,000,000+",
           "type": "string"
         },
         "is_available_in_play_pass": {
+          "description": "Whether the app is part of Google Play Pass.",
           "example": false,
           "type": "boolean"
         },
         "max_installs": {
+          "description": "Larger of the two install-count figures Google Play reports for the app.",
           "example": 500000000,
           "type": "integer"
         },
         "min_installs": {
+          "description": "Smaller of the two install-count figures Google Play reports, matching the `installs` band.",
           "example": 100000000,
           "type": "integer"
         },
         "more_by_developer": {
+          "description": "Other apps from the same developer, from the \"More by\" list on the app page.",
           "items": {
             "$ref": "#/definitions/googleplay.ListApp"
           },
           "type": "array"
         },
         "offers_iap": {
+          "description": "Whether the app offers in-app purchases.",
           "example": true,
           "type": "boolean"
         },
         "original_price": {
+          "description": "Price before the discount, in the same currency as `price`. Omitted when there is no original price.",
           "example": 4.99,
           "type": "number"
         },
         "platforms": {
+          "description": "Device types the app supports, such as `phone`, `tablet` or `chromebook`.",
           "example": [
             "[\"phone\"",
             "\"tablet\"",
@@ -202,50 +243,62 @@
           "type": "array"
         },
         "preregister": {
+          "description": "Whether the app is open for pre-registration.",
           "example": false,
           "type": "boolean"
         },
         "preview_video": {
+          "description": "URL of the app's preview video.",
           "example": "https://play.google.com/preview/sample",
           "type": "string"
         },
         "price": {
+          "description": "Price of the app in the currency given by `currency`. `0` for free apps.",
           "example": 0,
           "type": "number"
         },
         "price_text": {
+          "description": "Price as Google Play displays it, such as `Free`.",
           "example": "Free",
           "type": "string"
         },
         "privacy_policy": {
+          "description": "URL of the app's privacy policy.",
           "example": "https://openai.com/policies/privacy-policy",
           "type": "string"
         },
         "ratings": {
+          "description": "Total number of star ratings the app has received.",
           "example": 40123456,
           "type": "integer"
         },
         "recent_changes": {
+          "description": "Text of the latest release notes.",
           "example": "Bug fixes and performance improvements.",
           "type": "string"
         },
         "released": {
+          "description": "Release date of the app as listed on Google Play.",
           "example": "2023-07-19",
           "type": "string"
         },
         "reviews": {
+          "description": "Total number of written reviews the app has received.",
           "example": 1234567,
           "type": "integer"
         },
         "score": {
+          "description": "Average star rating of the app, out of 5.",
           "example": 4.8,
           "type": "number"
         },
         "score_text": {
+          "description": "Average rating as Google Play displays it, such as `4.8`.",
           "example": "4.8",
           "type": "string"
         },
         "screenshots": {
+          "description": "URLs of the app's screenshots.",
           "example": [
             "[\"https://play-lh.googleusercontent.com/sample-screenshot-1\"",
             "\"https://play-lh.googleusercontent.com/sample-screenshot-2\"]"
@@ -256,36 +309,44 @@
           "type": "array"
         },
         "similar_apps": {
+          "description": "Apps Google Play lists as similar to this one on the app page.",
           "items": {
             "$ref": "#/definitions/googleplay.ListApp"
           },
           "type": "array"
         },
         "summary": {
+          "description": "Short tagline shown under the app title.",
           "example": "The official app by OpenAI",
           "type": "string"
         },
         "title": {
+          "description": "App name as shown on Google Play.",
           "example": "ChatGPT",
           "type": "string"
         },
         "updated": {
+          "description": "Time the app was last updated, in Unix seconds.",
           "example": 1736899200,
           "type": "integer"
         },
         "url": {
+          "description": "Google Play details page URL for the app, in the requested language and country.",
           "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&hl=en&gl=us",
           "type": "string"
         },
         "version": {
+          "description": "Current app version string. Shows `VARY` when the version differs by device.",
           "example": "1.2026.056",
           "type": "string"
         },
         "video": {
+          "description": "URL of the app's promo video.",
           "example": "https://play.google.com/video/sample",
           "type": "string"
         },
         "video_image": {
+          "description": "URL of the cover image for the app's promo video.",
           "example": "https://play-lh.googleusercontent.com/sample-video-cover",
           "type": "string"
         }
@@ -311,10 +372,12 @@
     "googleplay.Category": {
       "properties": {
         "id": {
+          "description": "Category ID on Google Play, such as `PRODUCTIVITY`.",
           "example": "PRODUCTIVITY",
           "type": "string"
         },
         "name": {
+          "description": "Category name as shown on Google Play, such as `Productivity`.",
           "example": "Productivity",
           "type": "string"
         }
@@ -324,18 +387,22 @@
     "googleplay.DataSafetyEntry": {
       "properties": {
         "data": {
+          "description": "Kind of data covered by this disclosure, such as `Email address`.",
           "example": "Email address",
           "type": "string"
         },
         "optional": {
+          "description": "Whether providing this data is optional for the user.",
           "example": false,
           "type": "boolean"
         },
         "purpose": {
+          "description": "Reason the developer gives for using this data, such as `Analytics`.",
           "example": "Analytics",
           "type": "string"
         },
         "type": {
+          "description": "Data group this item belongs to, such as `Personal info`.",
           "example": "Personal info",
           "type": "string"
         }
@@ -345,22 +412,26 @@
     "googleplay.DataSafetyResult": {
       "properties": {
         "collected_data": {
+          "description": "Data the app says it collects, one entry per data item.",
           "items": {
             "$ref": "#/definitions/googleplay.DataSafetyEntry"
           },
           "type": "array"
         },
         "privacy_policy_url": {
+          "description": "URL of the app's privacy policy.",
           "example": "https://openai.com/policies/privacy-policy",
           "type": "string"
         },
         "security_practices": {
+          "description": "Security practices the developer declares for the app.",
           "items": {
             "$ref": "#/definitions/googleplay.SecurityPractice"
           },
           "type": "array"
         },
         "shared_data": {
+          "description": "Data the app says it shares with third parties, one entry per data item.",
           "items": {
             "$ref": "#/definitions/googleplay.DataSafetyEntry"
           },
@@ -372,25 +443,31 @@
     "googleplay.DeviceRating": {
       "properties": {
         "device": {
+          "description": "Device type the rating breakdown covers: `phone`, `tablet` or `chromebook`.",
           "example": "phone",
           "type": "string"
         },
         "histogram": {
+          "description": "Number of ratings at each star level on this device type, keyed `1` to `5`.",
           "type": "object"
         },
         "ratings": {
+          "description": "Total number of star ratings on this device type.",
           "example": 326809,
           "type": "integer"
         },
         "reviews": {
+          "description": "Total number of written reviews on this device type.",
           "example": 8946,
           "type": "integer"
         },
         "score": {
+          "description": "Average star rating on this device type, out of 5.",
           "example": 4.7,
           "type": "number"
         },
         "score_text": {
+          "description": "Average rating on this device type as Google Play displays it, such as `4.7`.",
           "example": "4.7",
           "type": "string"
         }
@@ -400,10 +477,12 @@
     "googleplay.Feature": {
       "properties": {
         "description": {
+          "description": "Short explanation of the feature.",
           "example": "Get answers, writing help, and image generation.",
           "type": "string"
         },
         "title": {
+          "description": "Name of the feature highlight.",
           "example": "AI assistant",
           "type": "string"
         }
@@ -413,54 +492,67 @@
     "googleplay.ListApp": {
       "properties": {
         "app_id": {
+          "description": "Package name of the app on Google Play, such as `com.openai.chatgpt`.",
           "example": "com.openai.chatgpt",
           "type": "string"
         },
         "currency": {
+          "description": "Currency code of the price, such as `USD`.",
           "example": "USD",
           "type": "string"
         },
         "developer": {
+          "description": "Name of the app's developer or publisher.",
           "example": "OpenAI",
           "type": "string"
         },
         "developer_id": {
+          "description": "Google Play developer ID. Use it with the developer endpoint.",
           "example": "7577165439232992817",
           "type": "string"
         },
         "free": {
+          "description": "Whether the app is free to install.",
           "example": true,
           "type": "boolean"
         },
         "icon": {
+          "description": "URL of the app icon.",
           "example": "https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A",
           "type": "string"
         },
         "price": {
+          "description": "Price of the app in the currency given by `currency`. `0` for free apps.",
           "example": 0,
           "type": "number"
         },
         "price_text": {
+          "description": "Price as Google Play displays it on the card, such as `FREE`.",
           "example": "FREE",
           "type": "string"
         },
         "score": {
+          "description": "Average star rating of the app, out of 5.",
           "example": 4.8,
           "type": "number"
         },
         "score_text": {
+          "description": "Average rating as Google Play displays it, such as `4.8`.",
           "example": "4.8",
           "type": "string"
         },
         "summary": {
+          "description": "Short tagline shown under the app title.",
           "example": "The official app by OpenAI",
           "type": "string"
         },
         "title": {
+          "description": "App name as shown on Google Play.",
           "example": "ChatGPT",
           "type": "string"
         },
         "url": {
+          "description": "Google Play details page URL for the app.",
           "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
           "type": "string"
         }
@@ -470,60 +562,74 @@
     "googleplay.Review": {
       "properties": {
         "criterias": {
+          "description": "Per-criterion ratings attached to the review, when Google Play shows them.",
           "items": {
             "$ref": "#/definitions/googleplay.ReviewCriteria"
           },
           "type": "array"
         },
         "date": {
+          "description": "Time the review was posted, in UTC (RFC 3339).",
           "example": "2026-02-18T12:34:56Z",
           "type": "string"
         },
         "id": {
+          "description": "Google Play review ID.",
           "example": "5b4e4d89-ce22-4f13-b676-bb3a7aafe278",
           "type": "string"
         },
         "reply_date": {
+          "description": "Time the developer replied, in UTC (RFC 3339).",
           "example": "2026-02-20T08:00:00Z",
           "type": "string"
         },
         "reply_text": {
+          "description": "Developer's reply to the review. `null` when there is no reply.",
           "example": "Thanks for the feedback!",
           "type": "string"
         },
         "score": {
+          "description": "Star rating the reviewer gave, from 1 to 5.",
           "example": 5,
           "type": "integer"
         },
         "score_text": {
+          "description": "Star rating as a string, such as `5`.",
           "example": "5",
           "type": "string"
         },
         "text": {
+          "description": "Body text of the review.",
           "example": "Very helpful for quick answers and brainstorming.",
           "type": "string"
         },
         "thumbs_up": {
+          "description": "Number of users who marked the review as helpful.",
           "example": 124,
           "type": "integer"
         },
         "title": {
+          "description": "Review headline. Currently always `null`.",
           "example": "Great app",
           "type": "string"
         },
         "url": {
+          "description": "Google Play link to this review.",
           "example": "https://play.google.com/store/apps/details?id=com.openai.chatgpt&reviewId=5b4e4d89-ce22-4f13-b676-bb3a7aafe278",
           "type": "string"
         },
         "user_image": {
+          "description": "URL of the reviewer's profile picture.",
           "example": "https://play-lh.googleusercontent.com/a-/ALV-UjVsample",
           "type": "string"
         },
         "user_name": {
+          "description": "Display name of the reviewer.",
           "example": "Jane Doe",
           "type": "string"
         },
         "version": {
+          "description": "App version the review was written for. `null` when not shown.",
           "example": "1.2026.056",
           "type": "string"
         }
@@ -533,10 +639,12 @@
     "googleplay.ReviewCriteria": {
       "properties": {
         "criteria": {
+          "description": "Name of the aspect being rated, such as `Accuracy`.",
           "example": "Accuracy",
           "type": "string"
         },
         "rating": {
+          "description": "Rating given for this aspect. `null` when no rating is shown.",
           "example": 5,
           "type": "integer"
         }
@@ -546,12 +654,14 @@
     "googleplay.ReviewsResult": {
       "properties": {
         "data": {
+          "description": "Reviews on this page, newest or sorted as requested.",
           "items": {
             "$ref": "#/definitions/googleplay.Review"
           },
           "type": "array"
         },
         "next_pagination_token": {
+          "description": "Token to pass as `next_pagination_token` to fetch the next page of reviews.",
           "example": "CscBIr4BAb_yELvAqtSacgExc3y_bO88_b1Q",
           "type": "string"
         }
@@ -561,10 +671,12 @@
     "googleplay.SecurityPractice": {
       "properties": {
         "description": {
+          "description": "Longer explanation of the security practice.",
           "example": "Your data is transferred over a secure connection",
           "type": "string"
         },
         "practice": {
+          "description": "Security practice declared by the developer, such as `Data is encrypted in transit`.",
           "example": "Data is encrypted in transit",
           "type": "string"
         }
@@ -782,7 +894,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns normalized app metadata from a Google Play details page, including installs, ratings, pricing, version info, developer metadata, media assets, release state, selected user comments, and \"More by this developer\" and \"Similar apps\" recommendation rails. For a per-device (phone/tablet/Chromebook) ratings-and-reviews breakdown, see `/googleplay/ratings`. Defaults: `country=us`, `lang=en`.",
+        "description": "Returns app metadata from a Google Play details page, including installs, ratings, pricing, version info, developer metadata, media assets, release state, selected user comments, and \"More by this developer\" and \"Similar apps\" recommendation rails. For a per-device (phone/tablet/Chromebook) ratings-and-reviews breakdown, see `/googleplay/ratings`. Defaults: `country=us`, `lang=en`.",
         "operationId": "googleplay-app",
         "parameters": [
           {
@@ -859,7 +971,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns category ids found in the Google Play apps navigation.",
+        "description": "Lists the Google Play app categories and subcategories, each with an id such as `PRODUCTIVITY` and a display name. `country` and `lang` take two-letter codes to pick the storefront and the language of the names.",
         "operationId": "googleplay-categories",
         "parameters": [
           {
@@ -928,7 +1040,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the data safety information displayed on Google Play.",
+        "description": "Returns the data safety section Google Play shows for an app, by the required `app_id`. It lists the data the app collects and shares, each with its type, purpose and whether it is optional, plus the app's security practices and privacy policy URL. `lang` sets the language.",
         "operationId": "googleplay-datasafety",
         "parameters": [
           {
@@ -998,7 +1110,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns apps published by a developer id or developer name.",
+        "description": "Lists the Google Play apps published by one developer, by developer id or name, for an optional country and language. `num` sets how many apps to return, and `full_detail=true` resolves each app to its full detail record instead of the listing summary. Returns the developer id and name with the app list.",
         "operationId": "googleplay-developer",
         "parameters": [
           {
@@ -1089,7 +1201,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns apps from a Google Play collection and category.",
+        "description": "Lists apps from a Google Play chart. `collection` is `TOP_FREE`, `TOP_PAID`, `GROSSING`, `NEW_FREE` or `NEW_PAID`, and `category`, `device`, `age`, `num`, `country` and `lang` narrow it. Set `full_detail` to get full app details instead of the compact card.",
         "operationId": "googleplay-list",
         "parameters": [
           {
@@ -1216,7 +1328,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns Google Play permission groups or a short permission name list.",
+        "description": "Returns the permissions a Google Play app requests, by the required `app_id`. Each entry has the permission name and its type. Set `short` to get only the permission names as a flat list. `country` and `lang` pick the storefront and language.",
         "operationId": "googleplay-permissions",
         "parameters": [
           {
@@ -1377,7 +1489,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns one or more pages of app reviews. Set `paginate=true` to fetch only the requested page.",
+        "description": "Returns Google Play reviews for an app by `app_id`. `sort` is `newest` (default), `helpfulness` or `rating`, and `num` is up to 1000 per request (default 100). Each review has its text, score, date, thumbs-up count, app version and any developer reply. Pass `next_pagination_token` back to continue.",
         "operationId": "googleplay-reviews",
         "parameters": [
           {
@@ -1486,7 +1598,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns Google Play search results for a term.",
+        "description": "Searches Google Play for apps matching the required `term`, up to `num` results (default 20, max 250). `price` is `all` (default), `free` or `paid`, and `country` and `lang` default to `us` and `en`. A strong exact match is placed first. An empty list means no apps matched.",
         "operationId": "googleplay-search",
         "parameters": [
           {
@@ -1589,7 +1701,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns apps from the \"Similar apps\" cluster on an app details page.",
+        "description": "Returns the apps in the Similar apps cluster on a Google Play app page, for the required `app_id`. `num` limits how many are returned, `country` and `lang` set the storefront and language, and `full_detail` returns full app details instead of compact cards.",
         "operationId": "googleplay-similar",
         "parameters": [
           {
@@ -1680,7 +1792,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns up to 10 suggestions for a search term.",
+        "description": "Returns up to 10 Google Play search suggestions for the term prefix in the path. `country` and `lang` take two-letter codes to pick the storefront and language. Each suggestion is a `term`.",
         "operationId": "googleplay-suggest",
         "parameters": [
           {

@@ -1,6 +1,6 @@
 {
   "name": "@crawlora-org/googleplay",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Crawlora Google Play API client with 11 endpoints for app search, details, reviews, ratings, permissions, data safety, charts, similar apps, and developers",
   "homepage": "https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=googleplay-javascript-homepage",
   "bugs": { "url": "https://github.com/Crawlora-org/crawlora-googleplay/issues" },

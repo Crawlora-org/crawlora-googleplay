@@ -8,7 +8,7 @@ The official Java client for Crawlora's hosted Google Play API. It exposes 11 en
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-googleplay</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
 </dependency>
 ```
 
